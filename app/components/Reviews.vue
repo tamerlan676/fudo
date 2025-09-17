@@ -126,7 +126,7 @@
                 width: fit-content;
                 color: #fff;
                 margin: 0 auto;
-                background: #CC66DA;
+                background: var(--pink);
                 @media(min-width: 992px){
                   justify-content: start;
                 }

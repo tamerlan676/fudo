@@ -31,31 +31,31 @@ export default {
             menu: [
                 {
                     title: 'Доставка овощей и фруктов',
-                    link: '/dostavka-ovoshei-i-fruktov'
+                    link: '#'
                 },
                 {
                     title: 'Доставка мясных продуктов',
-                    link: '/dostavka-ovoshei-i-fruktov'
+                    link: '#'
                 },
                 {
                     title: 'Доставка рыбы и морепродуктов',
-                    link: '/dostavka-ovoshei-i-fruktov'
+                    link: '#'
                 },
                 {
                     title: 'Доставка молочной продукции',
-                    link: '/dostavka-ovoshei-i-fruktov'
+                    link: '#'
                 },
                 {
                     title: 'Доставка бакалеи',
-                    link: '/dostavka-ovoshei-i-fruktov'
+                    link: '#'
                 },
                 {
                     title: 'Доставка орехов и сухофруктов',
-                    link: '/dostavka-ovoshei-i-fruktov'
+                    link: '#'
                 },
                 {
                     title: 'Доставка цветов',
-                    link: '/dostavka-ovoshei-i-fruktov'
+                    link: '#'
                 }
             ]
         }
@@ -67,7 +67,7 @@ export default {
 <style lang="scss" scoped>
 footer{
     padding: 80px 16px;
-    background: rgb(236, 236, 236);
+    background: rgb(247 247 247);
     border-radius: 50px 0 0 0;
     @media(min-width: 992px){
         padding: 120px 0 0;

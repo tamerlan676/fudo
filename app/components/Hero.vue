@@ -150,6 +150,7 @@
         padding: 50px 18px;
         border-radius: 0 0 20px 20px;
         position: relative;
+        background: var(--purple);
         @media(min-width: 992px){
                 padding: 80px 24px 120px;
                 border-radius: 0 0 100px 0;

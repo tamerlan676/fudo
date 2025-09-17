@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'OpenSans';
-    src: url('@/assets/fonts/OpenSans-Regular.ttf') format("truetype");
+    src: url('@/assets/fonts/OpenSans-Regular.woff') format("woff");
 }
 @font-face {
     font-family: 'OpenSans-Medium';
-    src: url('@/assets/fonts/OpenSans-Medium.ttf') format("truetype");
+    src: url('@/assets/fonts/OpenSans-Medium.woff') format("woff");
 }
 @font-face {
     font-family: 'OpenSans-Bold';
-    src: url('@/assets/fonts/OpenSans-Bold.ttf') format("truetype");
+    src: url('@/assets/fonts/OpenSans-Bold.woff') format("woff");
 }
 @font-face {
     font-family: 'OpenSans-ExtraBold';
-    src: url('@/assets/fonts/OpenSans-ExtraBold.ttf') format("truetype");
+    src: url('@/assets/fonts/OpenSans-ExtraBold.woff') format("woff");
 }
 
 :root { 
@@ -21,7 +21,7 @@
     --bold: 'OpenSans-Bold';
     --extraBold: 'OpenSans-ExtraBold';
     --purple: #770061;
-    --pink: #cc66da;
+    --pink: #b332c4;
 }
 
 *{
