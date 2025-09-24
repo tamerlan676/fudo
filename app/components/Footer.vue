@@ -12,9 +12,9 @@
                 .desc Обращайтесь за консультацией
                 .messengers
                     a(href="#") 
-                        img(src="~/assets/images/whatsapp.svg")
+                        img(src="~/assets/images/whatsapp.svg" loading="lazy")
                     a(href="#") 
-                        img(src="~/assets/images/telegram.svg")
+                        img(src="~/assets/images/telegram.svg" loading="lazy")
         .bottom
             .left
                 a(href="#") Политика конфиденциальности

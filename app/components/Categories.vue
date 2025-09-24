@@ -5,7 +5,7 @@ section.categories
     .categories-wrapper
         nuxt-link.category(v-for="(item, id) in categories" :key="id" :to="item.link")
             .category-name {{ item.title }}
-            img.category-icon(:src="item.img")
+            img.category-icon(:src="item.img" loading="lazy" width="130" height="130" :alt="item.title")
     </template>
     
     <script>
@@ -27,7 +27,7 @@ import flowersImg from '~/assets/images/categories/flowers.png'
           categories: [
             {
               title: 'Фрукты и овощи',
-              link: '#',
+              link: '/dostavka-fruktov-fud-city',
               img: fruitsImg
             },
             {

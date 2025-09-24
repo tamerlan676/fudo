@@ -1,15 +1,12 @@
 <template lang="pug">
-section.cardsSection
-    h2.section-title(v-html="cardsTitle")
-    .desc Многолетний опыт позволил нам выстроить простой и&nbsp;эффективный процесс
-    .wrapper 
-        .card(v-for="card in benefits") 
-            img(v-if="card.img" :src="card.img")
-            .cardTitle(v-if="card.title") {{ card.title }}
-            .cardDesc(v-html="card.text")
-        .card.largeCard(v-if="largeCard")
-            .text(v-html="largeCard.text")
-    a.btn(href="#") Написать сборщику
+    section.forthem
+        h2.section-title(v-html="forthemTitle")
+        .desc(v-html="assDesc")
+        .wrapper 
+            .card(v-for="card in forthemList") 
+                img(v-if="card.img" :src="card.img")
+                .cardTitle(v-if="card.title") {{ card.title }}
+        a.btn(href="#") Написать сборщику
     </template>
     
     
@@ -17,43 +14,31 @@ section.cardsSection
     export default {
         data() {
             return{
-                
     
             }
         },
         props: {
-          benefits: {
-            type: Array,
-          },
-          largeCard:{
-            type: Object
-          },
-          cardsTitle: {
-            type: String
-          }
-      },
+            forthemTitle: String,
+            assDesc: String,
+            forthemList: Array
+        }
     }
     </script>
     
     
     <style lang="scss" scoped>
-    .cardsSection{
+    .forthem{
         .section-title{
-            margin-bottom: 24px;
-            @media(min-width: 992px){
-                margin-bottom: 56px;
-            }
         }
         .desc{
             font-family: var(--medium);
             margin-bottom: 24px;
             @media(min-width: 992px){
                 text-align: center;
-                display: none;
                 margin-bottom: 56px;
             }
         }
-       .wrapper{
+        .wrapper{
             display: grid;
             grid-gap: 24px;
             margin-bottom: 24px;

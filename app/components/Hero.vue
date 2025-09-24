@@ -4,7 +4,7 @@
             .header
                 .logo
                     a(href="/")
-                        img(src="~/assets/images/logo.svg")
+                        img(src="~/assets/images/logo.svg" alt="Fudo" loading="lazy")
                 .lg-menu 
                     ul.parent-ul
                         li
@@ -12,11 +12,9 @@
                         li.dropdown-item(@click="turnCatMenu()") Наши услуги
                             ul.child-ul(:class="{active: catDroodown}")
                                 li
-                                    nuxt-link(to="#") Дизайн выставочных стендов
+                                    nuxt-link(to="/dostavka-fruktov-fud-city") Доставка фруктов и овощей
                                 li
-                                    nuxt-link(to="#") Дизайн выставочных стендов
-                                li
-                                    nuxt-link(to="#") Дизайн выставочных стендов
+                                    nuxt-link(to="/dostavka-fruktov-fud-city") Доставка фруктов и овощей с рынка Фуд Сити
                         li
                             nuxt-link(to="/") О Компании
 
@@ -24,7 +22,7 @@
                             nuxt-link(to="/") Контакты
                                     
                 a.zayavka(href="#") Оставить<br> заявку
-                a.phone(href="#") + 7 918 888 88 88
+                a.phone(href="#") + 7 918 820 80 97
                 .burger(:class="{ active: activeBurger }" @click="testMetod")
                     span
             .center 
@@ -36,17 +34,17 @@
                     .tips-wrapper 
                         .tip
                             .icon 
-                                img(src="~/assets/images/done.svg")
+                                img(src="~/assets/images/done.svg" loading="lazy")
                             .title Широкий<br>выбор
                             //- .desc Все категории товаров
                         .tip
                             .icon 
-                                img(src="~/assets/images/done.svg")
+                                img(src="~/assets/images/done.svg" loading="lazy")
                             .title Рыночные<br>цены
                             //- .desc Выполнено точно в срок
                         .tip
                             .icon 
-                                img(src="~/assets/images/done.svg")
+                                img(src="~/assets/images/done.svg" loading="lazy")
                             .title Розница<br>и опт
                             //- .desc Выполнено точно в срок
             .mob-menu(:class="{active: activeMobMenu}")
@@ -65,8 +63,6 @@
     export default {
         data() {
             return {
-                title: 'Доставка продуктов с&nbsp;рынка <span style="font-family: var(--bold)">Фуд Сити</span> по&nbsp;Москве и&nbsp;МО',
-                desc: 'Закупаем и доставляем свежие овощи, фрукты, мясо, рыбу, молочную продукцию, бакалею и&nbsp;напитки напрямую с&nbsp;рынка Фуд&nbsp;Сити',
                 activeBurger: false,
                 activeMobMenu: false,
                 menuActive: false,
@@ -118,6 +114,11 @@
                 ],
             }
         },
+        props: {  
+            title: String,
+            desc: String,
+            list: Array
+            },
         methods: {
                 testMetod() {
                     this.activeBurger = !this.activeBurger;
@@ -144,7 +145,6 @@
     
     <style lang="scss" scoped>
     .hero{
-        background-image: url('~/assets/images/hero.jpg');
         background-size: cover;
         background-position: center;
         padding: 50px 18px;
@@ -202,7 +202,7 @@
                             content: '';
                             width: 10px;
                             height: 10px;
-                            /* background-image: url(/assets/images/arrow.svg); */
+                            background-image: url(/assets/images/arrow.svg);
                             background-size: contain;
                         }
                     }

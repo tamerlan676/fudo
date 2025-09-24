@@ -1,6 +1,6 @@
 <template lang="pug">
-    Hero
-    Cards(:benefits="benefits" :largeCard="largeCard")
+    Hero(:title="title" :desc="desc")
+    Cards(:cardsTitle="cardsTitle" :benefits="benefits" :largeCard="largeCard")
     Categories
     Scheme
     Manager
@@ -17,8 +17,11 @@ import okImg from '~/assets/images/benefits/ok.svg'
 import cafeImg from '~/assets/images/benefits/cafe.svg'
 import managerImg from '~/assets/images/benefits/manager.svg'
 export default {
+    
     data() {
         return{
+            title: 'Доставка продуктов с&nbsp;рынка <span style="font-family: var(--bold)">Фуд Сити</span> по&nbsp;Москве и&nbsp;МО',
+            desc: 'Закупаем и доставляем свежие овощи, фрукты, мясо, рыбу, молочную продукцию, бакалею и&nbsp;напитки напрямую с&nbsp;рынка Фуд&nbsp;Сити',
             benefits: [
                 {
                     img: fullwayImg,
@@ -45,6 +48,7 @@ export default {
                     text: 'Персональный менеджер помогающий на каждом этапе процесса'
                 },
             ],
+            cardsTitle: 'Почему выбирают нас как поставщика с Фуд Сити?',
             largeCard: {
                 text: 'Многолетний опыт позволил нам выстроить простой и&nbsp;эффективный процесс'
             }

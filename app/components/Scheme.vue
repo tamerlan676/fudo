@@ -117,6 +117,7 @@
                     font-size: 20px;
                     font-family: var(--bold);
                     background: var(--pink);
+                    color: #fff;
                     display: flex;
                     justify-content: center;
                     align-items: center;

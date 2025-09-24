@@ -11,7 +11,7 @@
                 .tip Отвечу на вопросы
                 .tip Узнаю рыночные цены
                 .tip Организую доставку
-                img(src="~/assets/images/manager-call.png")
+                img(src="~/assets/images/manager-call.png" loading="lazy" alt="Менеджер Фуд Сити")
             .manager-name   Тамерлан Менеджер
     </template>
     
