@@ -31,22 +31,22 @@ export default {
             menu: [
                 {
                     title: 'Доставка овощей и фруктов',
-                    link: '#'
+                    link: '/dostavka-fruktov-fud-city'
                 },
                 {
                     title: 'Доставка мясных продуктов',
-                    link: '#'
+                    link: '/dostavka-miasa-fud-city'
                 },
                 {
                     title: 'Доставка рыбы и морепродуктов',
-                    link: '#'
-                },
-                {
-                    title: 'Доставка молочной продукции',
-                    link: '#'
+                    link: '/dostavka-rybi-fud-city'
                 },
                 {
                     title: 'Доставка бакалеи',
+                    link: '/dostavka-bakalei-fud-city'
+                },
+                {
+                    title: 'Доставка молочной продукции',
                     link: '#'
                 },
                 {

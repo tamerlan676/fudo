@@ -14,7 +14,11 @@
                                 li
                                     nuxt-link(to="/dostavka-fruktov-fud-city") Доставка фруктов и овощей
                                 li
-                                    nuxt-link(to="/dostavka-fruktov-fud-city") Доставка фруктов и овощей с рынка Фуд Сити
+                                    nuxt-link(to="/dostavka-miasa-fud-city") Доставка мяса и мясных изделий
+                                li
+                                    nuxt-link(to="/dostavka-rybi-fud-city") Доставка рыбы и морепрдуктов 
+                                li
+                                    nuxt-link(to="/dostavka-bakalei-fud-city") Доставка бакалеи 
                         li
                             nuxt-link(to="/") О Компании
 
@@ -73,38 +77,31 @@
                     link: '/',
                   },
                   {
-                    title: 'Каталог',
-                    link: '#',
-                    sub: false,
-                    subitems: [
-                    {
-                    title: 'Фрукты',
-                    link: '#'
-                  },
-                  {
-                    title: 'Экзотика',
-                    link: '#'
-                  },
-                 ]
-                  },
-                  {
                     title: 'Услуги',
                     link: '#',
                     sub: false,
                     subitems: [
                       {
-                      title: 'Доставка фруктов в офисы',
-                      link: '#'
+                      title: 'Доставка овощей и фруктов',
+                      link: '/dostavka-fruktov-fud-city'
+                      },
+                      {
+                      title: 'Доставка мяса и мясных изделий',
+                      link: '/dostavka-miasa-fud-city'
+                      },
+                      {
+                      title: 'Доставка рыбы и морепродуктов',
+                      link: '/dostavka-rybi-fud-city'
+                      },
+                      {
+                      title: 'Доставка бакалеи',
+                      link: '/dostavka-bakalei-fud-city'
                       },
                      
                     ]
                   },
                   {
                     title: 'О Компании',
-                    link: '#'
-                  },
-                  {
-                    title: 'Доставка',
                     link: '#'
                   },
                   {
@@ -219,7 +216,7 @@
                         a{
                             transition: all .5s ease;
                             &:hover{
-                                color: var(--pink)
+                                color: #ffc6fd
                             }
                         }
                         &:hover{
@@ -254,7 +251,7 @@
                             color: #fff;
                             transition: all .5s ease;
                             &:hover{
-                                color: var(--pink);
+                             color: #ffc6fd;
                             }
                         }
                     }
@@ -534,7 +531,7 @@
                         background-size: contain;
                         right: 10px;
                         background-repeat: no-repeat;
-                        /* background-image: url(~/assets/images/arrow.svg); */
+                        background-image: url(~/assets/images/arrow.svg);
                         transition: all .3s linear;
                         transform: rotate(270deg);
                         &.turned{

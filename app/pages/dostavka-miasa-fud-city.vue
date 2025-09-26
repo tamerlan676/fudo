@@ -1,6 +1,6 @@
 <template lang="pug">
     Hero(:title="title" :desc="desc")
-    ProductsList(title="Широкий ассортимент овощей и фруктов оптом" desc="Каждый день мы закупаем свежие продукты напрямую у проверенных поставщиков." :products="products")
+    ProductsList(title="Широкий ассортимент мясных изделий" desc="Каждый день мы закупаем свежее мясо напрямую у проверенных поставщиков." :products="products")
     Cards(:cardsTitle="forthemTitle" :benefits="forthemList")
     Cards(:cardsTitle="cardsTitle" :benefits="benefits" :largeCard="largeCard")
     Scheme(:title="schemeTitle" :desc="schemeDesc" :steps="steps")
@@ -19,10 +19,10 @@ import weightImg from '~/assets/images/benefits/weight.svg'
 import okImg from '~/assets/images/benefits/ok.svg'
 import cafeImg from '~/assets/images/benefits/cafe.svg'
 import managerImg from '~/assets/images/benefits/manager.svg'
-import fruitsImg from '~/assets/images/fruits.jpg'
-import berriesImg from '~/assets/images/berries.jpg'
-import vegetablesImg from '~/assets/images/vegetables.jpg'
-import greenImg from '~/assets/images/green.jpg'
+import beefImg from '~/assets/images/beef.jpg'
+import sheepImg from '~/assets/images/sheep.jpg'
+import chickenImg from '~/assets/images/chicken.jpg'
+import indImg from '~/assets/images/ind.jpg'
 import cafeiconImg from '~/assets/images/cafe.svg'
 import marketImg from '~/assets/images/market-point.svg'
 import personImg from '~/assets/images/person.svg'
@@ -30,29 +30,29 @@ import horecaImg from '~/assets/images/horeca.svg'
 export default {
     data() {
         return{
-            title: 'Фрукты и овощи оптом с&nbsp;<span style="font-family: var(--bold)">Фуд Сити</span> в&nbsp;Москве и&nbsp;МО',
-            desc: 'Закупаем свежие овощи и фрукты напрямую на&nbsp;рынке Фуд Сити и&nbsp;доставляем оптом ресторанам, магазинам и&nbsp;другим оптовым и&nbsp;розничным покупателям',
+            title: 'Мясо и мясная продукция с&nbsp;<span style="font-family: var(--bold)">Фуд Сити</span> в&nbsp;Москве и&nbsp;МО',
+            desc: 'Закупаем свежее мясо напрямую на&nbsp;рынке Фуд Сити и&nbsp;доставляем оптом ресторанам, магазинам и&nbsp;другим оптовым и&nbsp;розничным клиентам',
             products: [
                 {
-                    title: 'Свежие фрукты',
-                    img: fruitsImg,
-                    list: 'яблоки, груши, сливы, виноград, апельсины, мандарины, экзотика, и многое другое'
+                    title: 'Свежая говядина',
+                    img: beefImg,
+                    list: 'Грудина, фарш, лопатка, шея, язык, ребра, стейки и многое другое'
                 },
                 {
-                    title: 'Свежие ягоды',
-                    img: berriesImg,
-                    list: 'клубника, голубика, малина, черника, ежевика, калина, брусника и многое другое'
+                    title: 'Свежая баранина',
+                    img: sheepImg,
+                    list: 'Корейка, спинка, фарш, лопатка, шейка и многое другое'
                 },
                 {
-                    title: 'Свежие овощи',
-                    img: vegetablesImg,
-                    list: 'томаты, огурцы, картофель, перец, бакалажаны, кабачки, капуста и многое другое'
+                    title: 'Свежая курица',
+                    img: chickenImg,
+                    list: 'Филе грудки, бройлеры, окорочка, голень, печень, крылья и многое другое'
 
                 },
                 {
-                    title: 'Свежая зелень',
-                    img: greenImg,
-                    list: 'кинза, укроп, петрушка, тархун, мята, базелик, руккола, айсберг, сельдерей и многое другое'
+                    title: 'Свежая индейка',
+                    img: indImg,
+                    list: 'Филе грудки, филе бедра, котлеты, фарш, желудки,сердец и многое другое'
                 }
             ],
             forthemTitle: 'С кем мы работаем',
@@ -77,7 +77,7 @@ export default {
             benefits: [
                 {
                     img: fullwayImg,
-                    text: 'Прямые закупки у&nbsp;поставщиков Фуд&nbsp;Сити'
+                    text: 'Прямые закупки мяса у&nbsp;поставщиков Фуд&nbsp;Сити'
                 },
                 {
                     img: delImg,
@@ -89,7 +89,7 @@ export default {
                 },
                 {
                     img: okImg,
-                    text: 'Контроль качества и&nbsp;свежести продукции'
+                    text: 'Контроль качества и&nbsp;свежести мяcной продукции'
                 },
                 {
                     img: cafeImg,
@@ -106,7 +106,7 @@ export default {
                 {
                     num: 1,
                     title: 'Направьте список',
-                    desc: 'Отправьте список нужных товаров. Мы&nbsp;соберем актуальные цены на&nbsp;рынке.'
+                    desc: 'Отправьте список нужных позиций. Мы&nbsp;соберем актуальные цены на&nbsp;рынке.'
                 },
                 {
                     num: 2,
@@ -141,13 +141,8 @@ export default {
                             open: false
                         },
                         {
-                            question: 'Откуда берутся ваши фрукты?',
-                            answer: 'Работаем на прямую только с проверенными поставщиками, которые привозят лучшие фрукты со&nbsp;всего мира.',
-                            open: false
-                        },
-                        {
-                            question: 'Могу ли я заказать в офис?',
-                            answer: 'Да, вы можете заказать фрукты и овощи как домой, так и&nbsp;в&nbsp;офис или любое другое место. У нас есть предложения для оптовых и&nbsp;розничных клиентов',
+                            question: 'У кого вы закупаете мясо?',
+                            answer: 'Работаем на прямую только с проверенными поставщиками, которые давно работают на рынке.',
                             open: false
                         },
                         {
@@ -166,8 +161,8 @@ export default {
                             open: false
                         },
                     ],
-            assTitle: 'Широкий ассортимент овощей и фруктов оптом',
-            assDesc: 'Каждый день мы закупаем свежие продукты напрямую у проверенных поставщиков.',
+            assTitle: 'Широкий ассортимент мяса и мясных продуктов',
+            assDesc: 'Каждый день мы закупаем свежее мясо напрямую у проверенных поставщиков.',
             cardsTitle: 'Почему выгодно заказывать у нас?',
             largeCard: {
                 text: 'Мы стараемся поддерживать долгосрочные отношения с&nbsp;нашими клиентами'
@@ -176,8 +171,8 @@ export default {
     },
     setup() {
         useSeoMeta({
-            title: 'Фрукты и овощи оптом с Фуд Сити | Доставка по Москве и МО',
-            description: 'Овощи и фрукты оптом с Фуд Сити. Свежие продукты напрямую от поставщиков. Доставка для ресторанов, магазинов и оптовиков по Москве и МО.'
+            title: 'Мясо и мясная продукция оптом с Фуд Сити | Доставка по Москве и МО',
+            description: 'Мясо и мясные изделия с Фуд Сити. Свежие продукты напрямую от поставщиков. Доставка для ресторанов, магазинов и оптовиков по Москве и МО.'
         })
     }
 }

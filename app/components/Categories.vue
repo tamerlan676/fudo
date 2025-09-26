@@ -32,17 +32,17 @@ import flowersImg from '~/assets/images/categories/flowers.png'
             },
             {
               title: 'Мясо',
-              link: '#',
+              link: '/dostavka-miasa-fud-city',
               img: meatImg
             },
             {
               title: 'Рыбы и морепродукты',
-              link: '#',
+              link: '/dostavka-rybi-fud-city',
               img: fishImg
             },
             {
               title: 'Бакалея',
-              link: '#',
+              link: '/dostavka-bakalei-fud-city',
               img: bakalImg
             },
             {

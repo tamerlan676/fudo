@@ -1,7 +1,7 @@
 <template lang="pug">
 section.cardsSection
     h2.section-title(v-html="cardsTitle")
-    .desc Многолетний опыт позволил нам выстроить простой и&nbsp;эффективный процесс
+    .desc(v-html="largeCard.text")
     .wrapper 
         .card(v-for="card in benefits") 
             img(v-if="card.img" :src="card.img")
@@ -26,7 +26,8 @@ section.cardsSection
             type: Array,
           },
           largeCard:{
-            type: Object
+            type: Object,
+            default: '',
           },
           cardsTitle: {
             type: String
