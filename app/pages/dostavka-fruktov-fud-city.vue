@@ -1,6 +1,7 @@
 <template lang="pug">
     Hero(:title="title" :desc="desc")
     ProductsList(title="Широкий ассортимент овощей и фруктов оптом" desc="Каждый день мы закупаем свежие продукты напрямую у проверенных поставщиков." :products="products")
+    PriceListBlock(:priceListTitle="priceListTitle" :priceListDesc="priceListDesc" :priceListLink="priceListLink")
     Cards(:cardsTitle="forthemTitle" :benefits="forthemList")
     Cards(:cardsTitle="cardsTitle" :benefits="benefits" :largeCard="largeCard")
     Scheme(:title="schemeTitle" :desc="schemeDesc" :steps="steps")
@@ -55,6 +56,9 @@ export default {
                     list: 'кинза, укроп, петрушка, тархун, мята, базелик, руккола, айсберг, сельдерей и многое другое'
                 }
             ],
+            priceListTitle: 'Сколько стоят фрукты и&nbsp;овощи на&nbsp;Фуд&nbsp;Сити?',
+            priceListDesc: 'Для наших клиентов мы&nbsp;сформировали прайс-лист с&nbsp;оптовыми ценами на&nbsp;фрукты и&nbsp;овощи. Каждую неделю мы&nbsp;стараемся актуализировать цены и&nbsp;ассортимен.',
+            priceListLink: 'https://docs.google.com/spreadsheets/d/17r1xb_CuMd0x3XEtIPUXwbSkZWWUR5vNgW5dQYriOCw/edit?usp=sharing',
             forthemTitle: 'С кем мы работаем',
             forthemList: [
                 {
@@ -114,22 +118,22 @@ export default {
                     desc: 'Если цена вас устраивает, мы начинаем собирать ваш заказ.'
                 },
                 {
-                    num: 2,
+                    num: 3,
                     title: 'Соберем заказ',
                     desc: 'Собираем заказ, тщательно отбирая каждый продукт.'
                 },
                 {
-                    num: 3,
+                    num: 4,
                     title: 'Пришлем фотоотчет',
                     desc: 'Полностью собрав ваш заказ мы&nbsp;предоставляем фото или видео отчет'
                 },
                 {
-                    num: 4,
+                    num: 5,
                     title: 'Отправим заказ',
                     desc: 'Находим курьера Яндекс Go, грузим и&nbsp;отправляем. Вы получаете товар на&nbsp;адрес в&nbsp;удобное для вас время.'
                 },
                 {
-                    num: 5,
+                    num: 6,
                     title: 'Проверка и оплата',
                     desc: 'Если всё хорошо оплачиваете, если нет, мы&nbsp;найдем честное решение.'
                 },

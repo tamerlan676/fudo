@@ -22,6 +22,15 @@ export default defineNuxtConfig({
       ]
     }
   },
+  modules: [
+    [
+      'yandex-metrika-module-nuxt3',
+      {
+        id: '104316039',
+        webvisor: true
+      }
+    ]
+  ],
   compatibilityDate: '2025-07-15',
   css: ['~/assets/scss/main.scss'],
   devtools: { enabled: true }

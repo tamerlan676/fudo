@@ -9,6 +9,8 @@
                     ul.parent-ul
                         li
                             nuxt-link(to="/") Главная
+                        li
+                            nuxt-link(to="/o-nas") О Компании
                         li.dropdown-item(@click="turnCatMenu()") Наши услуги
                             ul.child-ul(:class="{active: catDroodown}")
                                 li
@@ -19,8 +21,6 @@
                                     nuxt-link(to="/dostavka-rybi-fud-city") Доставка рыбы и морепрдуктов 
                                 li
                                     nuxt-link(to="/dostavka-bakalei-fud-city") Доставка бакалеи 
-                        li
-                            nuxt-link(to="/") О Компании
 
                         li
                             nuxt-link(to="/") Контакты
@@ -33,7 +33,7 @@
                 .left 
                     h1(v-html="title")
                     .text(v-html="desc")
-                    a.btn(href="#") Связаться с закупщиком
+                    a.btn(href="https://wa.me/79188208097") Связаться с закупщиком
                 .right 
                     .tips-wrapper 
                         .tip
@@ -59,6 +59,7 @@
                         ul.child-ul(:class="{ active: item.sub }")
                             li(v-for="subitem in item.subitems" @click="turnMenu")
                                 nuxt-link(:to="subitem.link") {{ subitem.title }}
+                a.phone(href="tel:+79188208097") +7 918 820 80 97
     
     </template>
     
@@ -102,7 +103,7 @@
                   },
                   {
                     title: 'О Компании',
-                    link: '#'
+                    link: '/o-nas'
                   },
                   {
                     title: 'Контакты',
@@ -513,6 +514,7 @@
                     left: 0;
                 }
                 .parent-ul{
+                    margin-bottom: 24px;
                     .parent-li{
                     border-bottom: 1px solid #fff;
                     position: relative;
@@ -567,6 +569,12 @@
                         max-height: 300px;
                         }
                     }
+                }
+                .phone{
+                    color: #ffffff;
+                    font-family: var(--bold);
+                    font-size: 24px;
+                    text-decoration: underline;
                 }
             }
     }
