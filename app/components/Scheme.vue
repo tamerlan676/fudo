@@ -9,7 +9,7 @@
                 .stepNumber {{ card.num }}
                 .title(v-html="card.title")
                 .cardDesc(v-html="card.desc") 
-        a.btn(href="#") Отправить список
+        a.btn(href="https://wa.me/79188208097") Отправить список
     </template>
     
     

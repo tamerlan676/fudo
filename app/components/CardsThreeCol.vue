@@ -1,0 +1,123 @@
+<template lang="pug">
+section.cardsSection
+    h2.section-title(v-html="cardsTitle")
+    .desc(v-html="largeCard.text")
+    .wrapper 
+        .card(v-for="card in benefits") 
+            img(v-if="card.img" :src="card.img")
+            .cardTitle(v-if="card.title") {{ card.title }}
+            .cardDesc(v-html="card.text")
+            .cardTip(v-html="card.tip")
+        .card.largeCard(v-if="largeCard")
+            .text(v-html="largeCard.text")
+    a.btn(href="https://wa.me/79188208097") Уточнить детали
+    </template>
+    
+    
+    <script>
+    export default {
+        data() {
+            return{
+                
+    
+            }
+        },
+        props: {
+          benefits: {
+            type: Array,
+          },
+          largeCard:{
+            type: Object,
+            default: '',
+          },
+          cardsTitle: {
+            type: String
+          }
+      },
+    }
+    </script>
+    
+    
+    <style lang="scss" scoped>
+    .cardsSection{
+        .section-title{
+            margin-bottom: 24px;
+            @media(min-width: 992px){
+                margin-bottom: 56px;
+            }
+        }
+        .desc{
+            font-family: var(--medium);
+            margin-bottom: 24px;
+            @media(min-width: 992px){
+                text-align: center;
+                display: none;
+                margin-bottom: 56px;
+            }
+        }
+       .wrapper{
+            display: grid;
+            grid-gap: 24px;
+            margin-bottom: 24px;
+            @media(min-width: 992px){
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media(min-width: 1200px){
+                width: 1200px;
+                margin: 0 auto 40px;
+            }
+            .card{
+                img{
+                    width: 50px;
+                    height: 50px;
+                    margin-bottom: 8px;
+                }
+                .cardTitle{
+                    font-family: var(--bold);
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                }
+                .cardDesc{
+                    white-space: pre-line;
+                    border-bottom: 1px dashed rgb(182, 182, 182);
+                    margin-bottom: 8px;
+                    padding-bottom: 8px;
+                }
+                .cardTip{
+                    font-size: 14px;
+                }
+            }
+            .largeCard {
+                    display: none;
+                @media(min-width: 1200px){
+                    grid-template-columns: 1fr 1fr;
+                    grid-column: span 2;
+                    display: block;
+                    position: relative;
+                    &:before{
+                        position: absolute;
+                        top: 0;
+                        right: 50px;
+                        background-image: url(~/assets/images/manager.png);
+                        background-size: cover;
+                        width: 200px;
+                        height: 100%;
+                        content: '';
+                    }
+                }
+                .text{
+                    font-family: var(--bold);
+                    padding-right: 220px;
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+    
+       }
+        .btn{
+            width: 300px;
+            margin: 0 auto;
+        }
+        
+    }
+    </style>

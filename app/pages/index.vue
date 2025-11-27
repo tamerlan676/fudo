@@ -1,8 +1,9 @@
 <template lang="pug">
     Hero(:title="title" :desc="desc")
+    Scheme(:title="schemeTitle" :desc="schemeDesc" :steps="steps")
+    CardsThreeCol(:cardsTitle="termTitle" :benefits="termCards")
     Cards(:cardsTitle="cardsTitle" :benefits="benefits" :largeCard="largeCard")
     Categories
-    Scheme(:title="schemeTitle" :desc="schemeDesc" :steps="steps")
     Manager
     Reviews
     Footer
@@ -22,7 +23,7 @@ export default {
         return{
             title: 'Доставка продуктов с&nbsp;рынка <span style="font-family: var(--bold)">Фуд Сити</span> по&nbsp;Москве и&nbsp;МО',
             desc: 'Закупаем и доставляем свежие овощи, фрукты, мясо, рыбу, молочную продукцию, бакалею и&nbsp;напитки напрямую с&nbsp;рынка Фуд&nbsp;Сити',
-            schemeTitle: 'Как оформить заказ на&nbsp;доставку с Фуд Сити?',
+            schemeTitle: 'Как работает наш сервис доставки с&nbsp;рынка Фуд Сити?',
             schemeDesc: 'Многолетний опыт позволил нам выстроить простой и&nbsp;эффективный процесс',
             steps: [
                 {
@@ -85,7 +86,41 @@ export default {
             cardsTitle: 'Почему выбирают нас как поставщика с Фуд Сити?',
             largeCard: {
                 text: 'Мы стараемся наладить долгосрочные отношения с&nbsp;нашими клиентами'
-            }
+            },
+            termTitle: 'Условия работы нашего сервиса',
+            termCards: [
+                {
+                    title: 'Цены на товары',
+                    text: 'Мы закупаем любые категории товаров по&nbsp;<span style="color: #048743; font-family:var(--bold); font-size: 17px;">рыночным ценам</span> без&nbsp;лишних наценок',
+                    tip: 'В доказательство мы предоставляем чеки и&nbsp;накладные от&nbsp;продавцов'
+                },
+                {
+                    title: 'Минимальный заказ',
+                    text: 'Минимальная сумма вашего заказа должна составлять не менее <span style="color: #048743; font-family:var(--bold); font-size: 17px;">15&nbsp;000&nbsp;рублей</span>',
+                    tip: 'Заказ может быть и меньше, но наша услуга будет стоить не менее 1 500 руб'
+                },
+                {
+                    title: 'Стоимость услуги',
+                    text: 'За сборку, упаковку и погрузку мы берем  <span style="color: #048743; font-family:var(--bold); font-size: 17px;">5&#8209;10%</span> от суммы заказа в&nbsp;зависимости от&nbsp;объема ваших покупок',
+                    tip: 'Для регулярных и крупных клиентов всегда действует скидка на нашу услугу'
+                },
+                {
+                    title: 'Доставка заказа',
+                    text: 'Доставка осуществляется с помощью сервиса <span style="color: #048743; font-family:var(--bold); font-size: 17px;">Yandex Go.</span>',
+                    tip: 'Мы поможем найти и&nbsp;загрузить курьера, но&nbsp;за&nbsp;доставку платит покупатель'
+                },
+                {
+                    title: 'Сроки доставки',
+                    text: 'Чаще всего время сборки и доставки занимает<span style="color: #048743; font-family:var(--bold); font-size: 17px;"> 2-3 часа</span>',
+                    tip: 'Большие заказы нам обычно присылают за&nbsp;день, и&nbsp;утром мы оперативно их&nbsp;собираем'
+                },
+                {
+                    title: 'Оплата заказов',
+                    text: 'Оплата розничных заказов происходит<span style="color: #048743; font-family:var(--bold); font-size: 17px;"> при получении</span> после проверки товара',
+                    tip: 'С крупными заказами (более 30 000 рублей) работаем по предоплате'
+                },
+
+            ]
         }
     }
 }
@@ -96,5 +131,8 @@ export default {
 h1{
     font-family: var(--extraBold);
     font-size: 40px;
+}
+.wrapper{
+    grid-template-columns: 1fr 1fr;
 }
 </style>
