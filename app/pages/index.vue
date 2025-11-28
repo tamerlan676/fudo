@@ -5,6 +5,7 @@
     Cards(:cardsTitle="cardsTitle" :benefits="benefits" :largeCard="largeCard")
     Categories
     Manager
+    Accordeon(:questions="faqItems")
     Reviews
     Footer
 </template>
@@ -17,6 +18,12 @@ import weightImg from '~/assets/images/benefits/weight.svg'
 import okImg from '~/assets/images/benefits/ok.svg'
 import cafeImg from '~/assets/images/benefits/cafe.svg'
 import managerImg from '~/assets/images/benefits/manager.svg'
+import termDelImg from '~/assets/images/terms/del.svg'
+import termPriceImg from '~/assets/images/terms/price.svg'
+import termOrderImg from '~/assets/images/terms/order.svg'
+import termTimeImg from '~/assets/images/terms/time.svg'
+import termInfoImg from '~/assets/images/terms/info.svg'
+import termPayImg from '~/assets/images/terms/pay.svg'
 export default {
     
     data() {
@@ -57,6 +64,37 @@ export default {
                     desc: 'Если всё хорошо оплачиваете, если нет, мы&nbsp;найдем честное решение.'
                 },
             ],
+            faqItems: [
+            {
+              id: 1,
+              question: "Вы работаете только с оптовыми клиентами?",
+              answer: "Нет, у нас есть не только оптовое, но&nbsp;и&nbsp;розничное направление. <br>Мы работаем абсолютно с&nbsp;разными клиентами"
+            },
+            {
+              id: 2,
+              question: "Как узнать стоимость доставки?",
+              answer: " Вы можете воспользоваться приложением Яндекс Go, указав нужный адрес от&nbsp;Фуд Сити до&nbsp;нужного адреса. <br>Не забудьте указать грузчика, если вам необходимо поднять товары на&nbsp;этаж"
+            },
+            {
+              id: 3,
+              question: "Есть ли у вас самовывоз?",
+              answer: "Да, мы можем закупить и упаковать товары к вашему приезду. <br>Вам останется лишь приехать и&nbsp;забрать готовый заказ"
+            },
+            {
+              id: 4,
+              question: "Как узнать цены на товары?",
+              answer: "Свяжиесь с нами удобным способом и мы соберем для вас цены. <br> Вести прайсы сложно, так как на&nbsp;рынке цены очень динамичные"
+            },
+            {
+              id: 5,
+              question: "Вы можете купить для меня товары именно в той точке, в которй я хочу?",
+              answer: "Да, мы можем купить товары там. где вы скажете"
+            },
+            {   id: 6,
+                question: 'Могу ли я увидеть фото или видео товара перед покупкой ?',
+                answer: 'Да, мы можем прислать фото и видео в хорошем качетсве, чтобы вы сделали свой выбор',
+            },
+            ],
             benefits: [
                 {
                     img: fullwayImg,
@@ -91,33 +129,39 @@ export default {
             termCards: [
                 {
                     title: 'Цены на товары',
-                    text: 'Мы закупаем любые категории товаров по&nbsp;<span style="color: #048743; font-family:var(--bold); font-size: 17px;">рыночным ценам</span> без&nbsp;лишних наценок',
-                    tip: 'В доказательство мы предоставляем чеки и&nbsp;накладные от&nbsp;продавцов'
+                    text: 'Мы закупаем любые категории товаров по&nbsp;<span style="color: var(--pink); font-family:var(--bold); font-size: 17px;">рыночным ценам</span> без&nbsp;лишних наценок',
+                    tip: 'В доказательство мы предоставляем чеки и&nbsp;накладные от&nbsp;продавцов',
+                    img: termPriceImg
                 },
                 {
                     title: 'Минимальный заказ',
-                    text: 'Минимальная сумма вашего заказа должна составлять не менее <span style="color: #048743; font-family:var(--bold); font-size: 17px;">15&nbsp;000&nbsp;рублей</span>',
-                    tip: 'Заказ может быть и меньше, но наша услуга будет стоить не менее 1 500 руб'
+                    text: 'Минимальная сумма вашего заказа должна составлять не менее <span style="color: var(--pink); font-family:var(--bold); font-size: 17px;">15&nbsp;000&nbsp;рублей</span>',
+                    tip: 'Заказ может быть и меньше, но наша услуга будет стоить не менее 1 500 руб',
+                    img: termOrderImg
                 },
                 {
                     title: 'Стоимость услуги',
-                    text: 'За сборку, упаковку и погрузку мы берем  <span style="color: #048743; font-family:var(--bold); font-size: 17px;">5&#8209;10%</span> от суммы заказа в&nbsp;зависимости от&nbsp;объема ваших покупок',
-                    tip: 'Для регулярных и крупных клиентов всегда действует скидка на нашу услугу'
+                    text: 'За сборку, упаковку и погрузку мы берем  <span style="color: var(--pink); font-family:var(--bold); font-size: 17px;">5&#8209;10%</span> от суммы заказа в&nbsp;зависимости от&nbsp;объема ваших покупок',
+                    tip: 'Для регулярных и крупных клиентов всегда действует скидка на нашу услугу',
+                    img: termInfoImg
                 },
                 {
                     title: 'Доставка заказа',
-                    text: 'Доставка осуществляется с помощью сервиса <span style="color: #048743; font-family:var(--bold); font-size: 17px;">Yandex Go.</span>',
-                    tip: 'Мы поможем найти и&nbsp;загрузить курьера, но&nbsp;за&nbsp;доставку платит покупатель'
+                    text: 'Доставка осуществляется с помощью сервиса <span style="color: var(--pink); font-family:var(--bold); font-size: 17px;">Yandex Go.</span>',
+                    tip: 'Мы поможем найти и&nbsp;загрузить курьера, но&nbsp;за&nbsp;доставку платит покупатель',
+                    img: termDelImg
                 },
                 {
                     title: 'Сроки доставки',
-                    text: 'Чаще всего время сборки и доставки занимает<span style="color: #048743; font-family:var(--bold); font-size: 17px;"> 2-3 часа</span>',
-                    tip: 'Большие заказы нам обычно присылают за&nbsp;день, и&nbsp;утром мы оперативно их&nbsp;собираем'
+                    text: 'Чаще всего время сборки и доставки занимает<span style="color: var(--pink); font-family:var(--bold); font-size: 17px;"> 2-3 часа</span>',
+                    tip: 'Большие заказы нам обычно присылают за&nbsp;день, и&nbsp;утром мы оперативно их&nbsp;собираем',
+                    img: termTimeImg
                 },
                 {
                     title: 'Оплата заказов',
-                    text: 'Оплата розничных заказов происходит<span style="color: #048743; font-family:var(--bold); font-size: 17px;"> при получении</span> после проверки товара',
-                    tip: 'С крупными заказами (более 30 000 рублей) работаем по предоплате'
+                    text: 'Оплата розничных заказов происходит<span style="color: var(--pink); font-family:var(--bold); font-size: 17px;"> при получении</span> после проверки товара',
+                    tip: 'С крупными заказами (более 30 000 рублей) работаем по предоплате',
+                    img: termPayImg
                 },
 
             ]

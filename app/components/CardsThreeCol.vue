@@ -4,7 +4,7 @@ section.cardsSection
     .desc(v-html="largeCard.text")
     .wrapper 
         .card(v-for="card in benefits") 
-            img(v-if="card.img" :src="card.img")
+            img(v-if="card.img" :src="card.img") 
             .cardTitle(v-if="card.title") {{ card.title }}
             .cardDesc(v-html="card.text")
             .cardTip(v-html="card.tip")
