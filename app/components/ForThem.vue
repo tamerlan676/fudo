@@ -6,7 +6,7 @@
             .card(v-for="card in forthemList") 
                 img(v-if="card.img" :src="card.img")
                 .cardTitle(v-if="card.title") {{ card.title }}
-        a.btn(href="#") Написать сборщику
+        a.btn(href="https://t.me/tameshka" target="_blank") Написать сборщику
     </template>
     
     

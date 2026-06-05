@@ -33,7 +33,7 @@
                 .left 
                     h1(v-html="title")
                     .text(v-html="desc")
-                    a.btn(href="https://wa.me/79188208097") Связаться с закупщиком
+                    a.btn(href="https://t.me/tameshka" target="_blank") Связаться с закупщиком
                 .right 
                     .tips-wrapper 
                         .tip

@@ -3,8 +3,8 @@
         .left 
             h2 Хотите сразу получить все ответы на&nbsp;ваши вопросы?
             .txt Напишите своему личному менеджеру на&nbsp;рынке Фуд&nbsp;Сити
-            a.btn(href="https://wa.me/79188208097")
-                span Написать в WhatsApp
+            a.btn(href="https://t.me/tameshka" target="_blank")
+                span Написать в Telegram
                 //- img(src="~/assets/images/wts-white.svg") 
         .manager-block 
             .image

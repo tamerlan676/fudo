@@ -9,7 +9,7 @@ section.cardsSection
             .cardDesc(v-html="card.text")
         .card.largeCard(v-if="largeCard")
             .text(v-html="largeCard.text")
-    a.btn(href="https://wa.me/79188208097") Написать сборщику
+    a.btn(href="https://t.me/tameshka" target="_blank") Написать сборщику
     </template>
     
     

@@ -1,7 +1,7 @@
 <template lang="pug">
     Hero(:title="title" :desc="desc")
     ProductsList(title="Широкий ассортимент овощей и фруктов оптом" desc="Каждый день мы закупаем свежие продукты напрямую у проверенных поставщиков." :products="products")
-    PriceListBlock(:priceListTitle="priceListTitle" :priceListDesc="priceListDesc" :priceListLink="priceListLink")
+    //- PriceListBlock(:priceListTitle="priceListTitle" :priceListDesc="priceListDesc" :priceListLink="priceListLink")
     Cards(:cardsTitle="forthemTitle" :benefits="forthemList")
     Cards(:cardsTitle="cardsTitle" :benefits="benefits" :largeCard="largeCard")
     Scheme(:title="schemeTitle" :desc="schemeDesc" :steps="steps")

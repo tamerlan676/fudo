@@ -10,7 +10,7 @@ section.cardsSection
             .cardTip(v-html="card.tip")
         .card.largeCard(v-if="largeCard")
             .text(v-html="largeCard.text")
-    a.btn(href="https://wa.me/79188208097") Уточнить детали
+    a.btn(href="https://t.me/tameshka" target="_blank") Уточнить детали
     </template>
     
     
