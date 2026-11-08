@@ -16,6 +16,8 @@
                                 li
                                     nuxt-link(to="/dostavka-fruktov-fud-city") Доставка фруктов и овощей
                                 li
+                                    nuxt-link(to="/dostavka-orehov-fud-city") Доставка орехов
+                                li
                                     nuxt-link(to="/dostavka-miasa-fud-city") Доставка мяса и мясных изделий
                                 li
                                     nuxt-link(to="/dostavka-rybi-fud-city") Доставка рыбы и морепрдуктов 
@@ -24,6 +26,7 @@
 
                         li
                             nuxt-link(to="/") Контакты
+
                                     
                 a.zayavka(href="#") Оставить<br> заявку
                 a.phone(href="#") + 7 918 820 80 97

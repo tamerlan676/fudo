@@ -19,7 +19,7 @@
             .left
                 a(href="#") Политика конфиденциальности
                 a(href="#") Публичная оферта
-            .copyright Fudo 2025. Все права защищены! 
+            .copyright Fudo 2026. Все права защищены! 
 </template>
 
 
@@ -51,7 +51,7 @@ export default {
                 },
                 {
                     title: 'Доставка орехов и сухофруктов',
-                    link: '#'
+                    link: 'dostavka-orehov-fud-city'
                 },
                 {
                     title: 'Доставка цветов',
